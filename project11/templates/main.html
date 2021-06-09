@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/logincheck/">
+    {%  csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <th>login</th>
+
+        </tr>
+        <tr>
+            <td>User name<input type="text" placeholder="username" required name="t1"> </td>
+
+        </tr>
+        <br>
+        <tr>
+            <td>
+               Password <input type="password" placeholder="password" required name="t2">
+            </td>
+        </tr>
+        <tr>
+            <th><button type="submit">register</button></th>
+        </tr>
+
+    </table>
+
+</form>
+</body>
+</html>
