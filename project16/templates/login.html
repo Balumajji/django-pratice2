@@ -1,0 +1,46 @@
+{% extends 'common.html' %}
+
+{% block content %}
+
+<html>
+<body>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <table border="0" align="center">
+          <tr>
+            <th><h3>Login Page</h3></th>
+        </tr>
+        <tr>
+            <td>
+                <input
+                        type="email"
+                        placeholder="email"
+                        name="email"
+                        required
+                        class="form-control"
+                        aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+            </td>
+        </tr>
+
+        <td>
+            <input
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        required
+                        class="form-control"
+                        aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <button type="submit">Register</button>
+        </th>
+    </tr>
+        </table>
+    </form>
+</body>
+</html>
+{% endblock %}
